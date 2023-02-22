@@ -13,9 +13,9 @@ func main() {
 	}
 
 	for _, task := range tasks {
-		go func() {
+		go func(task string) {
 			fmt.Println(task)
-		}()
+		}(task)
 	}
 
 	time.Sleep(time.Second)
